@@ -7,36 +7,7 @@ class Timeline extends Component {
     return (
       <div>
         <Navbar />
-        {/* <div class="navbar is-inline-flex is-transparent">
-          <div class="navbar-brand">
-          </div>
-          <div class="navbar-menu">
-            <div class="navbar-item">
-              <div class="control has-icons-left">
-                <input
-                  class="input is-small has-text-centered"
-                  type="text"
-                  placeholder="search"
-                />
-                <span class="icon is-left is-small">
-                  <i class="material-icons">search</i>
-                </span>
-              </div>
-            </div>
-          </div>
-          <div class="navbar-item is-flex-touch">
-            <a class="navbar-item">
-              <i class="material-icons">explore</i>
-            </a>
-            <a class="navbar-item">
-              <i class="material-icons">favorite_border</i>
-            </a>
-            <a class="navbar-item">
-              <i class="material-icons">person_outline</i>
-            </a>
-          </div>
-        </div>
-        <div class="columns body-columns">
+        {/* <div class="columns body-columns">
           <div class="column is-half is-offset-one-quarter">
             <div class="card">
               <div class="header">
