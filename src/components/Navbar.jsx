@@ -4,8 +4,9 @@ class Navbar extends Component {
   render() {
     return (
       <div className="container-one">
-        <div className="title">Spacestagram</div>
+        
         <div class="navbar">
+        <div className="title">Spacestagram</div>
         <div class="navbar-item is-flex-touch">
             <a class="navbar-item">
               <i class="material-icons">explore</i>

@@ -1,8 +1,9 @@
 .title {
-    display: block;
-    font-size: 45px;
+    display: flex;
+    justify-content: flex-start;
+    font-size: 55px;
     margin-left: 55px;
-    margin-top: 30px;
+    margin-top: 20px;
     font-family: 'Pacifico', cursive;
     color: #D84727;
 }
@@ -10,15 +11,22 @@
 .navbar {
     background-color: white;
     border-bottom: 1px solid lightgray;
+    margin-right: 35px;
+    padding-bottom: 15px;
 }
 
-.navbar-item {
-    display: flex;
-    justify-content: end;
-}
 .search {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: flex-end;
-    margin-bottom: 20px;
+    padding-bottom: 15px;
+}
+
+.is-flex-touch {
+    display: flex;
+    margin-right: 20px;
+    justify-content: flex-end;
+}
+.navbar-item {
+    padding: 0px 10px 15px 5px;
 }

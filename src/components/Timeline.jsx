@@ -7,7 +7,7 @@ class Timeline extends Component {
     return (
       <div>
         <Navbar />
-        {/* <div class="columns body-columns">
+        <div class="columns body-columns">
           <div class="column is-half is-offset-one-quarter">
             <div class="card">
               <div class="header">
@@ -260,7 +260,7 @@ class Timeline extends Component {
               </div>
             </footer>
           </div>
-        </div> */}
+        </div>
       </div>
     );
   }
