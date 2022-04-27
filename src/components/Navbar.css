@@ -1,18 +1,44 @@
-.title {
-    display: flex;
-    justify-content: flex-start;
-    font-size: 55px;
-    margin-left: 55px;
-    margin-top: 20px;
-    font-family: 'Pacifico', cursive;
-    color: #D84727;
+i.nav {
+  background-color: #fff;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.0975);
+
+  position: fixed;
+
+  top: 0;
+
+  width: 100%;
+
+  z-index: 2;
+
+  -webkit-transition: height 0.2s ease-in-out;
+
+  transition: height 0.2s ease-in-out;
+
+  height: 77px;
+
 }
 
-.navbar {
-    background-color: white;
-    border-bottom: 1px solid lightgray;
-    margin-right: 35px;
-    padding-bottom: 15px;
+.nav-menus {
+  display: flex;
+
+  flex-direction: row;
+
+  height: 77px;
+
+  width: 70%;
+
+  margin: 0 auto;
+
+  padding: 26px 40px;
+}
+
+.web-title {
+  display: block;
+  font-family: "Pacifico", cursive;
+  color: #d84727;
+  text-decoration: none;
+  font-size: 35px;
 }
 
 .search {
@@ -20,12 +46,26 @@
     justify-content: flex-end;
     align-items: flex-end;
     padding-bottom: 15px;
+    margin-left: 250px;
 }
+
+input {
+    border-radius: 15px;
+    border: 1px solid gray;
+    padding: 10px 20px 10px 20px;
+    text-align: center;
+}
+
+.icon {
+    margin-left: 15px;
+}
+
 
 .is-flex-touch {
     display: flex;
-    margin-right: 20px;
+    margin-left: 200px;
     justify-content: flex-end;
+    align-items: flex-end;
 }
 .navbar-item {
     padding: 0px 10px 15px 5px;

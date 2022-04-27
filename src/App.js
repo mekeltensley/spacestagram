@@ -1,12 +1,14 @@
 import React, { Component } from "react";
-import Timeline from './components/Timeline';
+import Navbar from "./components/Navbar";
+import Photo from "./components/Photo";
 
 
 class App extends Component {
   render() {
     return (
       <div>
-        <Timeline />
+        <Navbar />
+        <Photo />
       </div>
     );
   }
