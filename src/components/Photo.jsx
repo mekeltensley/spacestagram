@@ -2,6 +2,46 @@ import React, { Component } from "react";
 import "./Navbar.css";
 import "./Photo.css";
 
+const RippleButton = ({ children, onClick }) => {
+  const [coords, setCoords] = React.useState({ x: -1, y: -1 });
+  const [isRippling, setIsRippling] = React.useState(false);
+
+  React.useEffect(() => {
+    if (coords.x !== -1 && coords.y !== -1) {
+      setIsRippling(true);
+      setTimeout(() => setIsRippling(false), 300);
+    } else setIsRippling(false);
+  }, [coords]);
+
+  React.useEffect(() => {
+    if (!isRippling) setCoords({ x: -1, y: -1 });
+  }, [isRippling]);
+
+  return (
+    <button
+      className="ripple-button"
+      onClick={(e) => {
+        const rect = e.target.getBoundingClientRect();
+        setCoords({ x: e.clientX - rect.left, y: e.clientY - rect.top });
+        onClick && onClick(e);
+      }}
+    >
+      {isRippling ? (
+        <span
+          className="ripple"
+          style={{
+            left: coords.x,
+            top: coords.y,
+          }}
+        />
+      ) : (
+        ""
+      )}
+      <span className="content">{children}</span>
+    </button>
+  );
+};
+
 class Photo extends Component {
   render() {
     return (
@@ -28,13 +68,15 @@ class Photo extends Component {
                 alt="The Moon"
               />
               <figcaption>
-                <h3>
-                  [Photo Name]
-                </h3>
-                <br/>
+                <h3>[Photo Name]</h3>
+                <br />
                 <p>[Photo Details]</p>
               </figcaption>
             </figure>
+          </div>
+          <div className="post-caption">
+            <RippleButton onClick={(e) => console.log(e)}>Like</RippleButton>
+            <RippleButton onClick={(e) => console.log(e)}>Unlike</RippleButton>
           </div>
         </div>
       </article>
