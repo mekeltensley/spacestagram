@@ -1,116 +1,81 @@
-.Post {
+.post {
 
   border-radius: 3px;
-
   border: 1px solid #e6e6e6;
-
   background-color: #fff;
-
-  margin-bottom: 60px;
-
-  margin-left : 20%;
-
+  margin-bottom: 100px;
+  margin-left: 20%;
   margin-right: 20%;
-
+  margin-top: 10%;
+  height: 485px;
+  width: 655px;
 }
 
-.Post-user {
-
+.post-user {
   display: flex;
-
   padding: 16px;
-
   align-items: center;
-
 }
 
-.Post-user-profilepicture {
+.post-user-profilepicture {
 
   width: 30px;
-
   height: 30px;
-
 }
 
-.Post-user-profilepicture img {
+.post-user-profilepicture img {
 
   width: 100%;
-
   height: 100%;
-
   border-radius: 50%;
-
 }
 
-.Post-user-nickname {
+.image-description {
 
   margin-left: 12px;
-
-  font-family: 'PT Sans', sans-serif;
-
+  margin-bottom: 5px;
+  font-family: 'Cormorant Garamond', serif;
   font-weight: bold;
-
 }
 
-.Post-image-bg {
+.post-image-bg {
 
   background-color: #efefef;
-
+  height: 485px;
+  width: 655px;
 }
 
-.Post-image img {
+.post-image img {
 
   display: block;
-
   width: 100%;
+  height: 485px;
+  width: 655px;
 
 }
 
-.Post-caption {
+.post-caption {
 
   padding: 16px 16px;
 
+
 }
 
-.Post-caption strong {
-
-  font-family: 'PT Sans', sans-serif;
+.post-caption strong {
 
   font-weight: bold;
+  font-family: 'Bebas Neue', cursive;
 
 }
 
 .vjs-fade-out {
 
   display: none;
-
   visibility: hidden;
-
   opacity: 0;
-
 }
-
-/* 
-.header {
-  display: flex;
-  justify-content: center;
+.image-title {
+  margin-top: 5px;
+  margin-left: 12px;
+  font-family: 'Bebas Neue', cursive;
 }
-.card-footer .columns {
-  width: 100%;
-}
-.card-footer .columns input {
-  border: none;
-  border-radius: 0;
-  box-shadow: none;
-}
-.card-footer .columns .column:last-child {
-  display: flex;
-  align-items: center;
-}
-.card-footer .columns .column:last-child button {
-  border: none;
-}
-.footer {
-  margin-top: 10vh;
-  padding: 2rem 1.5rem;
-} */

@@ -45,8 +45,7 @@ i.nav {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    padding-bottom: 15px;
-    margin-left: 250px;
+    margin-left: 200px;
 }
 
 input {
@@ -63,9 +62,10 @@ input {
 
 .is-flex-touch {
     display: flex;
-    margin-left: 200px;
+    margin-left: 150px;
     justify-content: flex-end;
     align-items: flex-end;
+    margin-top: 85px;
 }
 .navbar-item {
     padding: 0px 10px 15px 5px;
