@@ -1,35 +1,20 @@
-i.nav {
+i .nav {
   background-color: #fff;
-
   border-bottom: 1px solid rgba(0, 0, 0, 0.0975);
-
   position: fixed;
-
   top: 0;
-
   width: 100%;
-
   z-index: 2;
-
-  -webkit-transition: height 0.2s ease-in-out;
-
   transition: height 0.2s ease-in-out;
-
   height: 77px;
-
 }
 
 .nav-menus {
   display: flex;
-
   flex-direction: row;
-
   height: 77px;
-
   width: 70%;
-
   margin: 0 auto;
-
   padding: 26px 40px;
 }
 
@@ -47,7 +32,6 @@ i.nav {
     align-items: flex-end;
     margin-left: 22%;
     color: #5EB1BF;
-
 }
 
 input {
