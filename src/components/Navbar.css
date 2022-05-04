@@ -1,12 +1,8 @@
-i .nav {
-  background-color: #fff;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.0975);
-  position: fixed;
-  top: 0;
+.nav {
+  background-color: #CDEDF6;
   width: 100%;
   z-index: 2;
   transition: height 0.2s ease-in-out;
-  height: 77px;
 }
 
 .nav-menus {
@@ -58,4 +54,9 @@ input {
 }
 .navbar-item {
     padding: 0px 10px 15px 5px;
+}
+
+hr {
+  background-color: #d84727;
+  opacity: 0.8;
 }

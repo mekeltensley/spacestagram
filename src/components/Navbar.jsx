@@ -30,6 +30,7 @@ class Navbar extends Component {
             </a>
           </div>
         </div>
+        <hr/>
       </nav>
     );
   }
