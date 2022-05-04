@@ -1,0 +1,61 @@
+i .nav {
+  background-color: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.0975);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  transition: height 0.2s ease-in-out;
+  height: 77px;
+}
+
+.nav-menus {
+  display: flex;
+  flex-direction: row;
+  height: 77px;
+  width: 70%;
+  margin: 0 auto;
+  padding: 26px 40px;
+}
+
+.web-title {
+  display: block;
+  font-family: "Pacifico", cursive;
+  color: #d84727;
+  text-decoration: none;
+  font-size: 35px;
+}
+
+.search {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-left: 22%;
+    color: #5EB1BF;
+}
+
+input {
+    border-radius: 15px;
+    border: 1px solid #5EB1BF;;
+    padding: 10px 20px 10px 20px;
+    text-align: center;
+
+}
+
+.icon {
+    margin-left: 15px;
+}
+
+
+.is-flex-touch {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-top: 85px;
+    color: #5EB1BF;
+    margin-left: 23%;
+  
+}
+.navbar-item {
+    padding: 0px 10px 15px 5px;
+}
