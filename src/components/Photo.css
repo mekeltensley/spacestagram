@@ -1,12 +1,15 @@
 .post {
-  border-radius: 3px;
-  border: 1px solid #e6e6e6;
-  background-color: #fff;
+  border-radius: 6px;
+  background-color: #042A2B;
   margin-bottom: 20%;
   margin-left: 27%;
   margin-right: 20%;
   margin-top: 10%;
   width: 655px;
+  box-shadow: 0px 1px 2px 0px #CDEDF6,
+            1px 2px 4px 0px #CDEDF6,
+            2px 4px 8px 0px #CDEDF6,
+            2px 4px 16px 0px #CDEDF6;
 }
 
 .post-user-username {
