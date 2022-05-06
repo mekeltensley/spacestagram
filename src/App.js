@@ -16,10 +16,7 @@ class App extends Component {
     return (
       < Router>
       <div className="App" >
-        <video autoPlay loop muted
-        style={{
-          positon: "absolute"
-        }}>
+        <video autoPlay loop muted id="background-video">
           <source src={Planetmoon} type="video/mp4"/>
         </video>
         <Routes>

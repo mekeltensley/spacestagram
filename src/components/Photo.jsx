@@ -5,10 +5,11 @@ import "./Photo.css";
 import "./Like.css";
 
 
+
 class Photo extends Component {
   render() {
     return (
-      <article className="post" ref="post">
+      <article className="post" ref="post" id="planetmoon">
         <header>
           <div className="post-user">
             <div className="post-user-profilepicture">
