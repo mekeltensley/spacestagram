@@ -1,8 +1,5 @@
 .nav {
   background-color: #CDEDF6;
-  width: 100%;
-  z-index: 2;
-  transition: height 0.2s ease-in-out;
 }
 
 .nav-menus {
@@ -10,8 +7,7 @@
   flex-direction: row;
   height: 77px;
   width: 70%;
-  margin: 0 auto;
-  padding: 26px 40px;
+  margin: 0 250px 35px;
 }
 
 .web-title {
@@ -26,7 +22,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    margin-left: 22%;
+    margin-left: 18%;
     color: #5EB1BF;
 }
 
@@ -49,7 +45,7 @@ input {
     align-items: flex-end;
     margin-top: 85px;
     color: #5EB1BF;
-    margin-left: 23%;
+    margin-left: 20%;
   
 }
 .navbar-item {
