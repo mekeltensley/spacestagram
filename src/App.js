@@ -7,6 +7,8 @@ import {
   Routes
 } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import Planetmoon from "./components/video/planetmoon.mp4";
 
 
 class App extends Component {
@@ -14,16 +16,29 @@ class App extends Component {
     return (
       < Router>
       <div className="App" >
+        <video autoPlay loop muted
+        style={{
+          positon: "absolute"
+        }}>
+          <source src={Planetmoon} type="video/mp4"/>
+        </video>
         <Routes>
           <Route path='/'
             element={
               <Fragment>
                   <Navbar/>
                   <Photo/>
+                  <Footer />
               </Fragment>
             }
           />
         </Routes>
+        <video loop autoPlay>
+        <source
+          src="https://github.com/mekeltensley/spacestagram/blob/main/Planet%20Moon.mp4"
+          type="video/mp4"
+        />
+      </video>
       </div>
     </Router>
     );
