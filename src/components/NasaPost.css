@@ -1,21 +1,19 @@
 .post {
   border-radius: 6px;
-  background-color: #042A2B;
+  background-color: #042a2b;
   margin-bottom: 20%;
   margin-left: 27%;
   margin-right: 20%;
   margin-top: 10%;
   width: 655px;
-  box-shadow: 0px 1px 2px 0px #CDEDF6,
-            1px 2px 4px 0px #CDEDF6,
-            2px 4px 8px 0px #CDEDF6,
-            2px 4px 16px 0px #CDEDF6;
+  box-shadow: 0px 1px 2px 0px #cdedf6, 1px 2px 4px 0px #cdedf6,
+    2px 4px 8px 0px #cdedf6, 2px 4px 16px 0px #cdedf6;
 }
 
 .post-user-username {
   margin-left: 5px;
   font-weight: 500;
-  color: #EF7B45;
+  color: #ef7b45;
 }
 
 .post-user {
@@ -25,39 +23,33 @@
 }
 
 .post-user-profilepicture {
-
   width: 45px;
   height: 45px;
 }
 
 .post-user-profilepicture img {
-
   width: 100%;
   height: 100%;
   border-radius: 50%;
 }
 
 .image-description {
-
   margin-left: 12px;
   margin-bottom: 5px;
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   font-weight: bold;
 }
 
 .post-image-bg {
-
   background-color: #efefef;
   height: 480px;
 }
 
 .post-image img {
-
   display: block;
   width: 100%;
   height: 485px;
   width: 655px;
-
 }
 
 .post-caption {
@@ -66,15 +58,12 @@
 }
 
 .post-caption strong {
-
   font-weight: bold;
-  font-family: 'Bebas Neue', cursive;
-  color: #EF7B45;
-
+  font-family: "Bebas Neue", cursive;
+  color: #ef7b45;
 }
 
 .vjs-fade-out {
-
   display: none;
   visibility: hidden;
   opacity: 0;
@@ -107,7 +96,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  content: '';
+  content: "";
   transition: all 0.3s ease;
   z-index: 1;
   opacity: 0;
@@ -140,7 +129,7 @@
   font-weight: 400;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: #CDEDF6;
+  color: #cdedf6;
 }
 
 .hover-img:hover:before,
@@ -155,4 +144,13 @@
 
 .hover-img:hover figcaption {
   opacity: 1;
+}
+
+#explanation {
+  font-size: 15px;
+  line-height: normal;
+}
+
+#info {
+  font-size: 15px;
 }

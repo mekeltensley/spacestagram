@@ -1,15 +1,16 @@
-import React, { Component } from "react";
+import React from "react";
+import "./NasaPost.css";
+import Navbar from "./Navbar";
 import Like from "./Like";
-import "./Navbar.css";
-import "./Photo.css";
 import "./Like.css";
 
+const NasaPost = (props) => {
+  const { title, explanation, date, url } = props.data;
 
-
-class Photo extends Component {
-  render() {
-    return (
-      <article className="post" ref="post" id="planetmoon">
+  return (
+    <>
+      <Navbar />
+      <article className="post">
         <header>
           <div className="post-user">
             <div className="post-user-profilepicture">
@@ -26,15 +27,19 @@ class Photo extends Component {
         <div className="post-image">
           <div className="post-image-bg">
             <figure class="hover-img">
-              <img
-                src="https://images.unsplash.com/photo-1502134249126-9f3755a50d78?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8bmFzYXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=1000&q=60"
-                style={{ width: "655px", height: "485px" }}
-                alt="The Galaxy"
-              />
+              <video style={{ width: "655px", height: "485px" }}>
+                <source src={url} type="video/mp4" />
+              </video>
+              {/* <img
+                src={url}
+                
+                alt={title}
+              /> */}
               <figcaption>
-                <h3>[Title]</h3>
+                <h3>{title}</h3>
                 <br />
-                <p>[Details]</p>
+                <p id="explanation">{explanation}</p>
+                <span id="info">{date}</span>
               </figcaption>
             </figure>
           </div>
@@ -43,7 +48,8 @@ class Photo extends Component {
           </div>
         </div>
       </article>
-    );
-  }
-}
-export default Photo;
+    </>
+  );
+};
+
+export default NasaPost;
