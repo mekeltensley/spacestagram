@@ -1,13 +1,15 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
-import NasaPostContainer from "./components/NasaPostContainer";
+import NasaPost from "./components/NasaPost";
+import Navbar from "./components/Navbar";
 import Planetmoon from "./components/video/planetmoon.mp4";
 
 class App extends Component {
   render() {
     return (
       <>
+      <Navbar />
         <video autoPlay loop muted id="background-video">
           <source src={Planetmoon} type="video/mp4" />
         </video>
@@ -16,9 +18,7 @@ class App extends Component {
             <Route
               path="/"
               element={
-                <Fragment>
-                  <NasaPostContainer />
-                </Fragment>
+                  <NasaPost />
               }
             />
           </Routes>
