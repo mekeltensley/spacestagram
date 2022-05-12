@@ -20,13 +20,13 @@ class Navbar extends Component {
             </span>
           </div>
           <div class="navbar-item is-flex-touch">
-            <a class="navbar-item">
+            <a className="navbar-item" href="/">
               <i class="material-icons">explore</i>
             </a>
-            <a class="navbar-item">
+            <button class="likes">
               <i class="material-icons">favorite_border</i>
-            </a>
-            <a class="navbar-item">
+            </button>
+            <a class="navbar-item" href="/">
               <i class="material-icons">person_outline</i>
             </a>
           </div>

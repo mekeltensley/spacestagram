@@ -63,7 +63,7 @@ class NasaPost extends Component {
     }
     
     return (
-        <div className="flex flex-row flex-wrap justify-center">
+        <>
           {this.state.photos.map((results) => {
             return (
               <div key={results.index}>
@@ -94,16 +94,16 @@ class NasaPost extends Component {
                           </figcaption>
                         </figure>
                       </div>
-                      <div className="post-caption">
-                      <Button />
-                      </div>
+                    </div>
+                    <div className="post-caption">
+                    <Button itemId={results.index}/>
                     </div>
                   </article>
                 </LazyLoad>
               </div>
             );
           })}
-        </div>
+        </>
     );
   }
   render() {

@@ -1,66 +1,38 @@
 import React, { Component } from "react";
+import LikePost from "./LikePost";
+import UnlikePost from "./UnlikePost";
 
-const RippleButton = ({ children, onClick }) => {
-  const [coords, setCoords] = React.useState({ x: -1, y: -1 });
-  const [isRippling, setIsRippling] = React.useState(false);
+class Button extends Component {
+  constructor(props) {
+    super(props);
+    this.handleLikesPost = this.handleLikesPost.bind(this);
+    this.handleUnlikePost = this.handleUnlikePost.bind(this);
+    this.state = {isLikesPost: false};
+  }
 
-  React.useEffect(() => {
-    if (coords.x !== -1 && coords.y !== -1) {
-      setIsRippling(true);
-      setTimeout(() => setIsRippling(false), 300);
-    } else setIsRippling(false);
-  }, [coords]);
+  handleLikesPost() {
+    this.setState({isLikesPost: true});
+  }
 
-  React.useEffect(() => {
-    if (!isRippling) setCoords({ x: -1, y: -1 });
-  }, [isRippling]);
-
-  return (
-    <button
-      className="ripple-button"
-      onClick={(e) => {
-        const rect = e.target.getBoundingClientRect();
-        setCoords({ x: e.clientX - rect.left, y: e.clientY - rect.top });
-        onClick && onClick(e);
-      }}
-    >
-      {isRippling ? (
-        <span
-          className="ripple"
-          style={{
-            left: coords.x,
-            top: coords.y,
-          }}
-        />
-      ) : (
-        ""
-      )}
-      <span className="content">{children}</span>
-    </button>
-  );
-};
-
-class Like extends Component {
-  state = {
-    count: 0,
-  };
-
-  incrementLike = () => {
-    let newLike = this.state.count + 1;
-    this.setState({
-      count: newLike,
-    });
-  };
+  handleUnlikePost() {
+    this.setState({isLikesPost: false});
+  }
 
   render() {
-    return (
-        
-        <RippleButton onClick={this.incrementLike}>
-        {this.state.count}
-      </RippleButton>
+    const isLikesPost = this.state.isLikesPost;
+    let button;
+    if (isLikesPost) {
+      button = <UnlikePost onClick={this.handleUnlikePost} />;
+    } else {
+      button = <LikePost onClick={this.handleLikesPost} />;
+    }
 
+    return (
+      <button className="heart">
+      {button}
+    </button>
     );
   }
 }
 
-export default Like;
+export default Button;
