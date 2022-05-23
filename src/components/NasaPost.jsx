@@ -12,7 +12,7 @@ class NasaPost extends Component {
   constructor() {
     super();
     this.state = {
-      photos: [],
+      photos: null,
       isLoaded: false,
       hasError: false,
       errorMessage: "",
