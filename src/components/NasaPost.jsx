@@ -22,7 +22,7 @@ class NasaPost extends Component {
   componentDidMount() {
     this.axiosCancelSource = axios.CancelToken.source();
     axios
-      .get(`https://api.nasa.gov/planetary/apod?api_key=AWveb5LxJwa6tV6WmXeWGDDX2vkKLioGCopRnCt4`,
+      .get("https://api.nasa.gov/planetary/apod?api_key=AWveb5LxJwa6tV6WmXeWGDDX2vkKLioGCopRnCt4",
        { cancelToken: this.axiosCancelSource.token })
       .then((response) => {
         const { data } = response;
