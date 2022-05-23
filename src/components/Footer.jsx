@@ -3,8 +3,8 @@ import React, { Component }from "react";
 class Footer extends Component {
     render() {
         return(
-            <footer class="footer">
-                    <div class="container">
+            <footer className="footer">
+                    <div className="container">
                         <p>
                             <strong>Bulma</strong> by
                             <a href="http://jgthms.com">Jeremy Thomas</a>. The source code is licensed

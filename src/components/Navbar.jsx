@@ -13,21 +13,21 @@ class Navbar extends Component {
               </a>
             </h1>
           </div>
-          <div class="search">
+          <div className="search">
             <input type="text" placeholder="search" />
-            <span class="icon">
+            <span className="icon">
               <i class="material-icons">search</i>
             </span>
           </div>
-          <div class="navbar-item is-flex-touch">
+          <div className="navbar-item is-flex-touch">
             <a className="navbar-item" href="/">
-              <i class="material-icons">explore</i>
+              <i className="material-icons">explore</i>
             </a>
-            <button class="likes">
-              <i class="material-icons">favorite_border</i>
+            <button className="likes">
+              <i className="material-icons">favorite_border</i>
             </button>
-            <a class="navbar-item" href="/">
-              <i class="material-icons">person_outline</i>
+            <a className="navbar-item" href="/">
+              <i className="material-icons">person_outline</i>
             </a>
           </div>
         </div>

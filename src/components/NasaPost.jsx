@@ -6,7 +6,7 @@ import "./Button.css";
 import Loader from "./Loader";
 import LazyLoad from "react-lazyload";
 
-// const apiKey = process.env.REACT_APP_API_KEY;
+const API_KEY = process.env.REACT_APP_API_KEY;
 
 class NasaPost extends Component {
   constructor() {
@@ -22,7 +22,7 @@ class NasaPost extends Component {
   componentDidMount() {
     this.axiosCancelSource = axios.CancelToken.source();
     axios
-      .get("https://api.nasa.gov/planetary/apod?api_key=AWveb5LxJwa6tV6WmXeWGDDX2vkKLioGCopRnCt4",
+      .get(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}&count=100`,
        { cancelToken: this.axiosCancelSource.token })
       .then((response) => {
         const { data } = response;
@@ -41,9 +41,9 @@ class NasaPost extends Component {
 
     return (
         <>
-          {this.state.photos.map((results) => {
+          {this.state.photos.map((results, index) => {
             return (
-              <div key={results.index}>
+              <div key={index}>
                  <LazyLoad placeholder={<Loader />}>
                   <article className="post">
                     <header>
