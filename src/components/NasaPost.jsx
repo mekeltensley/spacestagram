@@ -5,9 +5,8 @@ import Button from "./Button";
 import "./Button.css";
 import Loader from "./Loader";
 import LazyLoad from "react-lazyload";
-require('dotenv').config();
 
-const API_KEY = process.env.REACT_APP_API_KEY;
+const apiKey = process.env.REACT_APP_API_KEY;
 
 class NasaPost extends Component {
   constructor() {
@@ -23,7 +22,7 @@ class NasaPost extends Component {
   componentDidMount() {
     this.axiosCancelSource = axios.CancelToken.source();
     axios
-      .get(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}&count=100`,
+      .get(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}&count=100`,
        { cancelToken: this.axiosCancelSource.token })
       .then((response) => {
         const { data } = response;
