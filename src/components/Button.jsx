@@ -8,6 +8,10 @@ class Button extends Component {
     this.handleLikesPost = this.handleLikesPost.bind(this);
     this.handleUnlikePost = this.handleUnlikePost.bind(this);
     this.state = {isLikesPost: false};
+    this.state = {
+      likes: 0,
+      show: true
+    };
   }
 
   handleLikesPost() {
@@ -17,7 +21,7 @@ class Button extends Component {
   handleUnlikePost() {
     this.setState({isLikesPost: false});
   }
-
+ 
   render() {
     const isLikesPost = this.state.isLikesPost;
     let button;
@@ -28,9 +32,8 @@ class Button extends Component {
     }
 
     return (
-      <button className="heart">
-      {button}
-    </button>
+      <button className="heart">{button}</button>
+    
     );
   }
 }
