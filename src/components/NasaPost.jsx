@@ -1,19 +1,12 @@
 import React, { Component } from "react";
 import "./NasaPost.css";
-import LazyLoad from "react-lazyload";
 import axios from "axios";
 import Button from "./Button";
 import "./Button.css";
+import Loader from "./Loader";
+import LazyLoad from "react-lazyload";
 
 const API_KEY = process.env.REACT_APP_API_KEY;
-
-function Loading() {
-  return (
-    <div className="flex justify-center items-center space-x-2 z-10">
-      <div className="loader ease-linear rounded-full border-8 border-t-8 border-gray-200 h-64 w-64" />
-    </div>
-  );
-}
 
 class NasaPost extends Component {
   constructor() {
@@ -28,7 +21,6 @@ class NasaPost extends Component {
 
   componentDidMount() {
     this.axiosCancelSource = axios.CancelToken.source();
-
     axios
       .get(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}&count=100`,
        { cancelToken: this.axiosCancelSource.token })
@@ -41,33 +33,18 @@ class NasaPost extends Component {
         }
         this.setState({ isLoaded: true });
       })
-
-      .catch((error) => {
-        this.setState({ hasError: true });
-        this.setState({ errorMessage: error });
-      });
   }
-
-  componentWillUnmount() {
-    this.axiosCancelSource.cancel("Axios request canceled.");
-  }
-
-  likePost(index) {
-    const fav = [...this.state.photos];
-    fav[index].liked = !fav[index].liked;
-  }
-
   pageLoading() {
     if (!this.state.isLoaded) {
-      return Loading();
+      return Loader();
     }
-    
+
     return (
         <>
           {this.state.photos.map((results) => {
             return (
               <div key={results.index}>
-                <LazyLoad placeholder={<Loading />}>
+                 <LazyLoad placeholder={<Loader />}>
                   <article className="post">
                     <header>
                       <div className="post-user">
@@ -99,7 +76,7 @@ class NasaPost extends Component {
                     <Button itemId={results.index}/>
                     </div>
                   </article>
-                </LazyLoad>
+                  </LazyLoad>
               </div>
             );
           })}
@@ -108,10 +85,10 @@ class NasaPost extends Component {
   }
   render() {
     if (this.state.hasError) {
-      <h1>Error Loading</h1>;
+        <h1>Error Occurred</h1>;
     }
     return <div>{this.pageLoading()}</div>;
-  }
+}
 }
 
 export default NasaPost;
