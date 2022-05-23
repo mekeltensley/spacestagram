@@ -5,6 +5,7 @@ import Button from "./Button";
 import "./Button.css";
 import Loader from "./Loader";
 import LazyLoad from "react-lazyload";
+require('dotenv').config();
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 
